@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>포폴러</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./asset/css/index.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/header.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./asset/semantic/semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+	<script src="./asset/semantic/semantic.min.js"></script>
+</head>
+<body>
+	<div class="header-grid">
+		<a href="index.html">
+		<span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
+		</a>
+	</div>
+	<div class="banner-grid">
+		<div class="banner-icon-grid">
+			<a href=""><i class="icon facebook banner-icon"></i></a>
+			<a href=""><i class="icon instagram banner-icon"></i></a>
+			<a href=""><i class="icon twitter banner-icon"></i></a>
+		</div>
+	</div>
+    <div class="container-grid">
+		
+		<div class="modal-grid">
+			<div class="ui modal" id="project">
+			  <div class="header">Project</div>
+				
+			  	<div class="ui grid">
+				  	<div class="ten wide column">
+						<div class="img">image slide</div>
+					</div>
+				  	<div class="six wide column modal-content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor est nunc, at porttitor mauris volutpat ac. Nunc dapibus luctus consectetur. Maecenas suscipit egestas risus, at egestas nulla sollicitudin at. Vivamus semper suscipit ligula eget ornare. Nunc vitae nunc eget nulla semper porta. Suspendisse vel lobortis dolor. Maecenas felis leo, consequat ut felis et, viverra lobortis enim. Quisque gravida nunc faucibus ante malesuada, in congue sem convallis. Suspendisse euismod augue at dui tempor sagittis.Fusce lobortis tempor rutrum. Sed eget fermentum neque. Proin imperdiet venenatis purus eu molestie. Maecenas consectetur tristique augue, id posuere magna feugiat at. Aliquam ut feugiat sem. Sed turpis urna, consequat eget orci ultricies, dignissim blandit nunc. Vestibulum semper rhoncus dolor et molestie. Nam dictum libero purus, non venenatis odio interdum at.Maecenas porta sapien vitae nulla euismod aliquet.</p></div>
+				</div>
+				
+			</div>
+		</div>
+	
+		<div class="info">
+			<div class="user-img"></div>
+			<div class="user-name">김명준(myoungjoon kim)</div>
+			<div class="user-categor">백엔드 개발자</div>
+			<div class="user-info">
+				<p>
+					<div class="user-info-data">경력 : 3년차</div>
+					<div class="user-info-data">희망페이 : 0만원 ~ 1000만원</div>
+					<div class="user-info-data">시간대 : 9:00 ~ 20:00(평일)</div>
+					<div class="user-info-data">미팅장소 : 서울 종로구</div>
+				</p>
+				<p class="user-info-intro">세상을 조금이나마 더 편리하게 만드는 일을 하고있습니다, 백엔드와 기획을 주로 합니다.세상을 조금이나마 더 편리하게 만드는 일을 하고있습니다, 백엔드와 기획을 주로 합니다.세상을 조금이나마 더 편리하게 만드는 일을 하고있습니다, 백엔드와 기획을 주로 합니다.</p>
+				
+			</div>
+			<div class="user-btn">
+				<div class="ui animated green button" tabindex="0" onClick="modal();">
+				  <div class="visible content">연락하기</div>
+				  <div class="hidden content">
+					<i class="right facebook messenger icon" style="font-size: 20px;"></i>
+				  </div>
+				</div>
+				<div 
+					 class="ui icon button" 
+					 id="link_btn" 
+					 data-inverted="" 
+					 data-tooltip="copy link" 
+					 data-position="top center"
+					 data-clipboard-text="This is dummy link."
+					 onClick="tooltip_change();"
+				>
+				  <i class="icon linkify"></i>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="list">
+			<div class="ui list">
+			  <h2 class="list-title">About Me</h3>
+			  <a href="intro.html"><div class="item">🖐 <span class="item-txt">간단소개</span></div></a>
+			  <a href="skil.html"><div class="item">💾 <span class="item-txt">기술들</span></div></a>
+			  <a href="intro.html"><div class="item">📃 <span class="item-txt">활동 및 이력</span></div></a>
+			</div>
+		</div>
+		<div class="list">
+			<div class="ui list">
+			  <h2 class="list-title">Projects</h3>
+			  <div class="item">💻 <span class="item-txt">코딩팩</span></div>
+			  <div class="item">⚙️ <span class="item-txt">Apache Control</span></div>
+			  <div class="item">🏛 <span class="item-txt">청원 서비스</span></div>
+			  <div class="item">⚖️ <span class="item-txt">생활법률</span></div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="footer-grid">
+		© 2019 Populer. All rights reserved.
+	</div>
+</body>
+<script>
+	
+function modal() {
+	$('#project')
+	  .modal('show')
+	;
+}
+function tooltip_change() {
+	$("#link_btn").attr("data-tooltip", "copyied!");
+}
+
+</script>
+</html>
