@@ -22,10 +22,8 @@
 	</div>
     <div class="container-grid">
 		
-		<div class="back-btn">
-			<a href="index.html">
-				<i class="angle left icon icon-back"></i>뒤로가기
-			</a>
+		<div class="back-btn" onClick="page_back();">
+			<i class="angle left icon icon-back"></i>뒤로가기
 		</div>
 		<div class="container-grid-content">
 		<h1>🖐간단소개</h1>
@@ -41,13 +39,22 @@
 	</div>
 </body>
 <script>
-function modal() {
+
+function page_back()
+{
+	history.back();
+}
+	
+function modal()
+{
 	$('#project')
 	  .modal('show')
 	;
 }
-function page_back() {
-	document.referrer ? history.back() : location.href="index.html";
+function tooltip_change()
+{
+	$("#link_btn").attr("data-tooltip", "copyied!");
 }
+
 </script>
 </html>

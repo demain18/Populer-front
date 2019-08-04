@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>포폴러</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./asset/css/post.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/header.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./asset/semantic/semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="./asset/semantic/semantic.min.js"></script>
+	<!-- slider -->
+	<link rel="stylesheet" href="./asset/js/slider-master/css/leps-slider.css">
+</head>
+<body>
+	<div class="header-grid">
+		<span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
+	</div>
+    <div class="container-grid">
+		
+		<div class="back-btn" onClick="page_back();">
+			<i class="angle left icon icon-back"></i>뒤로가기
+		</div>
+		<div class="container-grid-content">
+		<h1>💻코딩팩</h1>
+		<p>코딩팩은 개발에 필요한 프로그램이나 유틸을 한번에 그리고 간편하게 다운받고 싶다는 아이디어로 시작한 프로젝트로 개발자를 위한 유틸들을 원클릭으로 다운받을 수 있는 'Util', 웹프로그래밍 공부를 위한 'Course', 개발자들의 커뮤니케이션과 프로젝트 공개를 위한 'Community'등의 기능을 제공하고 있습니다.</p>
+		<h1 class="title-type2">개발 스택</h2>
+		<div class="ui bulleted list">
+		  	<div class="item">HTML</div>
+			<div class="item">CSS</div>
+			<div class="item">Bootstrap</div>
+		  	<div class="item">Javascript</div>
+			<div class="item">Jquery</div>
+			<div class="item">PHP</div>
+			<div class="item">Codeigniter</div>
+			<div class="item">Server hosting</div>
+		</div>
+		<h1 class="title-type2">개발 인원</h2>
+		<div class="ui bulleted list">
+		  	<div class="item">김명준</div>
+		</div>
+		
+		<div class="leps-slider">
+			<div>
+				<img src="./asset/img/slider_1.png" class="strech">
+			</div>
+			<div>
+				<img src="./asset/img/slider_2.png" class="strech">
+			</div>	
+			<div>
+				<img src="./asset/img/slider_3.png" class="strech">
+			</div>	
+		</div>
+
+		</div>
+		
+	</div>
+	<div class="footer-grid">
+		© 2019 Populer. All rights reserved.
+	</div>
+</body>
+<script src="./asset/js/slider-master/js/leps-slider.js"></script>
+<script>
+function page_back()
+{
+	history.back();
+}
+	
+function modal()
+{
+	$('#project')
+	  .modal('show')
+	;
+}
+function tooltip_change()
+{
+	$("#link_btn").attr("data-tooltip", "copyied!");
+}
+</script>
+</html>

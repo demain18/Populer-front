@@ -57,7 +57,7 @@
 					<div class="user-info-data">시간대 : 9:00 ~ 20:00(평일)</div>
 					<div class="user-info-data">미팅장소 : 서울 종로구</div>
 				</p>
-				<p class="user-info-intro">세상을 조금이나마 더 편리하게 만드는 일을 하고있습니다, 백엔드와 기획을 주로 합니다.세상을 조금이나마 더 편리하게 만드는 일을 하고있습니다, 백엔드와 기획을 주로 합니다.세상을 조금이나마 더 편리하게 만드는 일을 하고있습니다, 백엔드와 기획을 주로 합니다.</p>
+				<p class="user-info-intro">세상을 조금이나마 더 편리하게 만드는 일을 하고있습니다, 백엔드와 기획을 주로 합니다.</p>
 				
 			</div>
 			<div class="user-btn">
@@ -93,7 +93,7 @@
 		<div class="list">
 			<div class="ui list">
 			  <h2 class="list-title">Projects</h3>
-			  <div class="item">💻 <span class="item-txt">코딩팩</span></div>
+			  <a href="project_codingpack.html"><div class="item">💻 <span class="item-txt">코딩팩</span></div></a>
 			  <div class="item">⚙️ <span class="item-txt">Apache Control</span></div>
 			  <div class="item">🏛 <span class="item-txt">청원 서비스</span></div>
 			  <div class="item">⚖️ <span class="item-txt">생활법률</span></div>
@@ -106,15 +106,25 @@
 	</div>
 </body>
 <script>
+
+function page_back()
+{
+	document.referrer ? history.back() : location.href="index.html";
+}
 	
-function modal() {
+function modal()
+{
 	$('#project')
 	  .modal('show')
 	;
 }
-function tooltip_change() {
+function tooltip_change()
+{
 	$("#link_btn").attr("data-tooltip", "copyied!");
 }
 
 </script>
 </html>
+
+
+
