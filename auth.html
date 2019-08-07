@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>포폴러</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="./asset/css/post.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/auth.css">
 	<link rel="stylesheet" type="text/css" href="./asset/css/header.css">
 	<link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -14,7 +14,10 @@
 	  src="https://code.jquery.com/jquery-3.1.1.min.js"
 	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 	  crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 	<script src="./asset/semantic/semantic.min.js"></script>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="header-grid">
@@ -45,44 +48,30 @@
 	</div>
     <div class="container-grid">
 		
-		<div class="back-btn" onClick="page_back();">
-			<i class="angle left icon icon-back"></i>뒤로가기
-		</div>
-		<div class="container-grid-content">
-		<h1>💾기술들</h1>
-		<h1 class="title-type2">프론트엔드</h2>
-		<div class="ui bulleted list">
-		  	<div class="item">HTML</div>
-			<div class="item">CSS</div>
-			<div class="item">Bootstrap</div>
-			<div class="item">Simantic UI</div>
-		  	<div class="item">Javascript</div>
-		  	<div class="item">
-				<div>Javascript Framework</div>
-				<div class="list">
-			  	<div class="item">Jquery</div>
-			  	<div class="item">Vue.js</div>
-				<div class="item">React</div>
+		<div class="auth-grid">
+			<div class="title">Populer</div>
+			<div class="form-grid">
+			<form class="ui large form forms">
+			  <div class="field">
+				<!-- <label class="form-name">E-mail</label> -->
+				<input type="text" name="first-name" placeholder="E-mail">
+			  </div>
+			  <div class="field">
+				<!-- <label class="form-name">Password</label> -->
+				<input type="text" name="last-name" placeholder="Password">
+			  </div>
+				<!--
+			  <div class="field">
+				<div class="ui checkbox">
+				  <input type="checkbox" tabindex="0" class="hidden">
+				  <label class="form-name">I agree to the Terms and Conditions</label>
 				</div>
-		  	</div>
-		</div>
-		<h1 class="title-type2">백엔드</h2>
-		<div class="ui bulleted list">
-		  	<div class="item">PHP</div>
-			<div class="item">Codeigniter</div>
-			<div class="item">Javascript</div>
-			<div class="item">Node.js</div>
-			<div class="item">Ajax</div>
-			<div class="item">Axios</div>
-			<div class="item">Mysql</div>
-		</div>
-		<h1 class="title-type2">서버</h2>
-		<div class="ui bulleted list">
-		  	<div class="item">Apache</div>
-			<div class="item">Ubuntu</div>
-			<div class="item">Amazone EC2</div>
-			<div class="item">Naver Cloud Platform</div>
-		</div>
+			  </div>
+				-->
+			  <button class="ui blue button field btn-submit" type="submit">로그인</button>
+			</form>
+			<a href=""><p class="register-txt">회원가입 하기</p></a>
+			</div>
 		</div>
 		
 	</div>
@@ -92,10 +81,9 @@
 </body>
 <script src="./asset/js/all.js"></script>
 <script>
-
 function page_back()
 {
-	history.back();
+	document.referrer ? history.back() : location.href="index.html";
 }
 	
 function modal()
@@ -106,8 +94,11 @@ function modal()
 }
 function tooltip_change()
 {
-	$("#link_btn").attr("data-tooltip", "copyied!");
+	$("#link_btn").attr("data-tooltip", "복사됨!");
 }
 
 </script>
 </html>
+
+
+

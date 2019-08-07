@@ -1,23 +1,14 @@
 body {
-	background-color: rgba(255,255,255,1.00)!important;
+	background-color: rgba(255,255,255,1.00);
 	font-family: 'Noto Sans KR', sans-serif!important;
 }
 a:link { color: black; text-decoration: none;}
 a:visited { color: black; text-decoration: none;}
 a:hover { color: black!important; text-decoration: underline;}
-
 .header-grid {
 	width: 100%;
 	height: 45px;
 	background-color: #17223b;
-}
-.banner-grid {
-	width: 100%;
-	height: 400px;
-	border-bottom: 1px solid #D9D9D9;
-	background-image: url('https://wallpaperaccess.com/full/14229.jpg');
-    background-size: cover;
-    background-position: center;
 }
 .container-grid {
 	max-width: 900px;
@@ -33,21 +24,67 @@ a:hover { color: black!important; text-decoration: underline;}
 	position: relative;
 	bottom: -150px;
 	margin-bottom: 10px;
+	clear: both;
 }
 
 /* header */
+.header-grid-content {
+	position: relative;
+	max-width: 900px;
+	margin: auto;
+}
+.header-btn-grid-left {
+	color: white;
+	cursor: pointer;
+	position: relative;
+	float: left;
+	padding: 13px;
+	transition: 0.1s;
+}
+.header-btn-grid-left:hover {
+	background-color: #283757;
+}
 .header-logo {
 	font-size: 17px;
 	font-weight: bold;
 	line-height: 42px;
 	float: left;
-	margin-left: 20px;
+	margin-left: 10px;
 	color: white;
 }
 .header-logo-icon {
 	position: relative;
 	font-size: 20px!important;
 	top: 2px;
+}
+.user-img-small {
+	width: 32px;
+	height: 32px;
+	border-radius: 70px;
+	position: relative;
+	top: 7px;
+	background-image: url(../img/user-img.jpg);
+    background-size: cover;
+    background-position: center;
+	float: right;
+	margin-right: 10px;
+}
+.header-user-name {
+	display: block;
+	color: white;
+	float: right;
+	position: relative;
+	line-height: 45px;
+}
+.header-dropdown {
+	position: relative;
+	top: 0px;
+	float: right;
+	margin-right: 10px;
+}
+.header-dropdown>.dropdown {
+	position: relative;
+	margin-top: 40px!important;
 }
 /* header */
 

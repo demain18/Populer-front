@@ -19,9 +19,30 @@
 </head>
 <body>
 	<div class="header-grid">
-		<a href="index.html">
-		<span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
-		</a>
+		<div class="header-grid-content">
+			<a href="index.html">
+				<span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
+			</a>
+			<!-- <span class="header-btn-grid-left" style="margin-left: 10px;">홈</span> -->
+			<a href="freelencer.html"><span class="header-btn-grid-left" style="margin-left: 10px;">프리랜서</span></a>
+			<!-- <span class="header-btn-grid-left">Button</span> -->
+			<div class="ui dropdown header-dropdown">
+				  <span class="header-user-name">김명준<i class="dropdown icon"></i></span>
+				  <div class="user-img-small"></div>
+				  <div class="menu">
+					  <div class="item">기본 정보</div>
+					  <div class="item">
+						  메세지
+						  <a class="ui mini blue circular label message-label">17</a>
+					  </div>
+					  <div class="item">내 포트폴리오</div>
+					  <div class="item">프로젝트 추가하기</div>
+					  <div class="item">설정</div>
+					  <div class="divider"></div>
+					  <div class="item"><a href="auth.html">로그아웃 하기</a></div>
+				  </div>
+			</div>
+		</div>	
 	</div>
 	<div class="banner-grid">
 		<div class="banner-icon-grid">
@@ -48,8 +69,8 @@
 	
 		<div class="info">
 			<div class="user-img"></div>
-			<div class="user-name">김명준(myoungjoon kim)</div>
-			<div class="user-categor">백엔드 개발자</div>
+			<div class="user-name">김명준(myoung joon kim)</div>
+			<div class="user-categor"><!-- 웹개발> -->백엔드 개발자</div>
 			<div class="user-info">
 				<p>
 					<div class="user-info-data">경력 : 3년차</div>
@@ -71,7 +92,7 @@
 					 class="ui icon button" 
 					 id="link_btn" 
 					 data-inverted="" 
-					 data-tooltip="copy link" 
+					 data-tooltip="링크 복사" 
 					 data-position="top center"
 					 data-clipboard-text="This is dummy link."
 					 onClick="tooltip_change();"
@@ -105,8 +126,8 @@
 		© 2019 Populer. All rights reserved.
 	</div>
 </body>
+<script src="./asset/js/all.js"></script>
 <script>
-
 function page_back()
 {
 	document.referrer ? history.back() : location.href="index.html";
@@ -120,7 +141,7 @@ function modal()
 }
 function tooltip_change()
 {
-	$("#link_btn").attr("data-tooltip", "copyied!");
+	$("#link_btn").attr("data-tooltip", "복사됨!");
 }
 
 </script>

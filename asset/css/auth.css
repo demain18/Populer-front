@@ -1,0 +1,47 @@
+body {
+	background-color: #111A2F!important;
+}
+.container-grid {
+	background-color: rgba(255,255,255,0.00)!important;
+}
+.footer-grid {
+	color: white;
+}
+
+.auth-grid {
+	background-color: rgba(255,255,255,0.00)!important;
+	position: relative;
+	top: 100px;
+}
+.title {
+	color: white;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Lora', serif!important;
+}
+.form-grid {
+	max-width: 500px;
+	margin: auto;
+}
+.forms {
+	background-color: rgba(255,255,255,0.00)!important;
+}
+.forms>.field {
+	
+}
+.form-name {
+	color: white!important;
+}
+.btn-submit {
+	position: relative;
+	width: 100%;
+	line-height: 20px!important;
+}
+.register-txt {
+	text-align: center;
+	color: white;
+	font-size: 13px;
+	position: relative;
+	top: 15px;
+}

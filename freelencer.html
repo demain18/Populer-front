@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>포폴러</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="./asset/css/post.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/freelencer.css">
 	<link rel="stylesheet" type="text/css" href="./asset/css/header.css">
 	<link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -14,6 +14,7 @@
 	  src="https://code.jquery.com/jquery-3.1.1.min.js"
 	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 	  crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 	<script src="./asset/semantic/semantic.min.js"></script>
 </head>
 <body>
@@ -44,47 +45,59 @@
 		</div>	
 	</div>
     <div class="container-grid">
-		
-		<div class="back-btn" onClick="page_back();">
-			<i class="angle left icon icon-back"></i>뒤로가기
+		<div class="categor-grid item-grid">
+			<div class="categor-item">
+				<i class="icon user categor-icon"></i> 전체
+			</div>
+			<div class="categor-item">
+				<i class="icon pencil alternate categor-icon"></i> 디자인
+			</div>
+			<div class="categor-item">
+				<i class="icon code categor-icon"></i> 개발
+			</div>
+			<div class="categor-item">
+				<i class="icon camera categor-icon"></i> 영상 제작
+			</div>
+			<div class="categor-item">
+				<i class="icon shopping cart categor-icon"></i> 마케팅
+			</div>
 		</div>
-		<div class="container-grid-content">
-		<h1>💾기술들</h1>
-		<h1 class="title-type2">프론트엔드</h2>
-		<div class="ui bulleted list">
-		  	<div class="item">HTML</div>
-			<div class="item">CSS</div>
-			<div class="item">Bootstrap</div>
-			<div class="item">Simantic UI</div>
-		  	<div class="item">Javascript</div>
-		  	<div class="item">
-				<div>Javascript Framework</div>
-				<div class="list">
-			  	<div class="item">Jquery</div>
-			  	<div class="item">Vue.js</div>
-				<div class="item">React</div>
+		<div class="list-grid item-grid">
+			<div class="ui grid list-item-grid">
+				<div class="three wide column user-img-grid">
+					<div class="user-img"></div>
 				</div>
-		  	</div>
+				<div class="thirteen wide column">
+				  	<div class="list-item-content">
+					<p class="user-name">김명준</p>
+					<p class="user-intro">세상을 조금이나마 더 편리하게 만드는 일을 하고있습니다, 백엔드와 기획을 주로 합니다</p>
+				   	</div>
+				</div>
+			</div>
+			<div class="ui grid list-item-grid">
+				<div class="three wide column user-img-grid">
+					<div class="user-img-sample"></div>
+				</div>
+				<div class="thirteen wide column">
+				  	<div class="list-item-content">
+					<p class="user-name">Sample</p>
+					<p class="user-intro">This is sample text.</p>
+				   	</div>
+				</div>
+			</div>
+			<div class="ui grid list-item-grid">
+				<div class="three wide column user-img-grid">
+					<div class="user-img-sample"></div>
+				</div>
+				<div class="thirteen wide column">
+				  	<div class="list-item-content">
+					<p class="user-name">Sample</p>
+					<p class="user-intro">This is sample text.</p>
+				   	</div>
+				</div>
+			</div>
+			
 		</div>
-		<h1 class="title-type2">백엔드</h2>
-		<div class="ui bulleted list">
-		  	<div class="item">PHP</div>
-			<div class="item">Codeigniter</div>
-			<div class="item">Javascript</div>
-			<div class="item">Node.js</div>
-			<div class="item">Ajax</div>
-			<div class="item">Axios</div>
-			<div class="item">Mysql</div>
-		</div>
-		<h1 class="title-type2">서버</h2>
-		<div class="ui bulleted list">
-		  	<div class="item">Apache</div>
-			<div class="item">Ubuntu</div>
-			<div class="item">Amazone EC2</div>
-			<div class="item">Naver Cloud Platform</div>
-		</div>
-		</div>
-		
 	</div>
 	<div class="footer-grid">
 		© 2019 Populer. All rights reserved.
@@ -92,10 +105,9 @@
 </body>
 <script src="./asset/js/all.js"></script>
 <script>
-
 function page_back()
 {
-	history.back();
+	document.referrer ? history.back() : location.href="index.html";
 }
 	
 function modal()
@@ -106,8 +118,11 @@ function modal()
 }
 function tooltip_change()
 {
-	$("#link_btn").attr("data-tooltip", "copyied!");
+	$("#link_btn").attr("data-tooltip", "복사됨!");
 }
 
 </script>
 </html>
+
+
+

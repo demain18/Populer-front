@@ -15,12 +15,33 @@
 	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 	  crossorigin="anonymous"></script>
 	<script src="./asset/semantic/semantic.min.js"></script>
-	<!-- slider -->
-	<link rel="stylesheet" href="./asset/js/slider-master/css/leps-slider.css">
 </head>
 <body>
 	<div class="header-grid">
-		<span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
+		<div class="header-grid-content">
+			<a href="index.html">
+				<span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
+			</a>
+			<!-- <span class="header-btn-grid-left" style="margin-left: 10px;">홈</span> -->
+			<a href="freelencer.html"><span class="header-btn-grid-left" style="margin-left: 10px;">프리랜서</span></a>
+			<!-- <span class="header-btn-grid-left">Button</span> -->
+			<div class="ui dropdown header-dropdown">
+				  <span class="header-user-name">김명준<i class="dropdown icon"></i></span>
+				  <div class="user-img-small"></div>
+				  <div class="menu">
+					  <div class="item">기본 정보</div>
+					  <div class="item">
+						  메세지
+						  <a class="ui mini blue circular label message-label">17</a>
+					  </div>
+					  <div class="item">내 포트폴리오</div>
+					  <div class="item">프로젝트 추가하기</div>
+					  <div class="item">설정</div>
+					  <div class="divider"></div>
+					  <div class="item"><a href="auth.html">로그아웃 하기</a></div>
+				  </div>
+			</div>
+		</div>	
 	</div>
     <div class="container-grid">
 		
@@ -30,7 +51,20 @@
 		<div class="container-grid-content">
 		<h1>💻코딩팩</h1>
 		<p>코딩팩은 개발에 필요한 프로그램이나 유틸을 한번에 그리고 간편하게 다운받고 싶다는 아이디어로 시작한 프로젝트로 개발자를 위한 유틸들을 원클릭으로 다운받을 수 있는 'Util', 웹프로그래밍 공부를 위한 'Course', 개발자들의 커뮤니케이션과 프로젝트 공개를 위한 'Community'등의 기능을 제공하고 있습니다.</p>
-		<h1 class="title-type2">개발 스택</h2>
+		<!-- <p><span class="item-strong">개발 기간</span> : 2019년 1월 ~ 2019년 5월</p> -->
+		<p><span class="item-strong">개발 기간</span></p>
+		<div class="ui bulleted list">
+		  	<div class="item">2019년 1월 ~ 2019년 5월</div>
+		</div>
+		<p><span class="item-strong">브라우저</span></p>
+		<div class="ui bulleted list">
+		  	<div class="item">Chrome, Safari, IE11</div>
+		</div>
+		<p><span class="item-strong">팀원</span></p>
+		<div class="ui bulleted list">
+		  	<div class="item">김명준</div>
+		</div>
+		<p><span class="item-strong">개발 스택</span></p>
 		<div class="ui bulleted list">
 		  	<div class="item">HTML</div>
 			<div class="item">CSS</div>
@@ -41,22 +75,51 @@
 			<div class="item">Codeigniter</div>
 			<div class="item">Server hosting</div>
 		</div>
-		<h1 class="title-type2">개발 인원</h2>
+		<p><span class="item-strong">업무 내용</span></p>
 		<div class="ui bulleted list">
-		  	<div class="item">김명준</div>
+			<div class="item">서비스 내용 기획</div>
+		  	<div class="item">전체적인 웹 디자인 제작</div>
+			<div class="item">프론트엔드 퍼블리싱</div>
+			<div class="item">백엔드 개발</div>
+			<div class="item">서버 관리</div>
 		</div>
-		
-		<div class="leps-slider">
-			<div>
-				<img src="./asset/img/slider_1.png" class="strech">
-			</div>
-			<div>
-				<img src="./asset/img/slider_2.png" class="strech">
-			</div>	
-			<div>
-				<img src="./asset/img/slider_3.png" class="strech">
-			</div>	
+			
+		<div class="img-grid" onClick="project_modal();">
+		<img src="./asset/img/slider_3.png" class="item-image">
+		<div class="comment">Dropbox Business</div>
 		</div>
+		<!-- modal -->
+		<div class="ui modal" id="modal_01">
+			<!--
+		  <div class="header">
+			Dropbox Business
+		  </div>
+			-->
+		  <div class="content" id="modal_content_01">
+			<img src="./asset/img/slider_3.png" class="item-image-modal" id="modal_img_01">
+			<p>Dropbox Business</p>
+		  </div>
+		</div>
+		<!-- modal -->
+			
+		<div class="img-grid" onClick="project_modal2();">
+		<img src="./asset/img/slider_4.png" class="item-image">
+		<div class="comment">Material Blog</div>
+		</div>
+		<!-- modal -->
+		<div class="ui modal" id="modal_02">
+			<!--
+		  <div class="header">
+			Dropbox Business
+		  </div>
+			-->
+		  <div class="content" id="modal_content_02">
+			<img src="./asset/img/slider_4.png" class="item-image-modal" id="modal_img_02">
+			<p>Material Blog</p>
+		  </div>
+		</div>
+		<!-- modal -->
+			
 
 		</div>
 		
@@ -65,22 +128,48 @@
 		© 2019 Populer. All rights reserved.
 	</div>
 </body>
-<script src="./asset/js/slider-master/js/leps-slider.js"></script>
+<script src="./asset/js/all.js"></script>
 <script>
 function page_back()
 {
 	history.back();
-}
-	
-function modal()
-{
-	$('#project')
-	  .modal('show')
-	;
-}
+}	
 function tooltip_change()
 {
 	$("#link_btn").attr("data-tooltip", "copyied!");
 }
+
+function project_modal() {
+	$('#modal_01').css({
+		maxWidth: '900px!important',
+		padding: '0rem!important'
+	});
+	$('#modal_content_01').css({
+		padding: '0rem'
+	});
+	$('#modal_img_01').css({
+		width: "100%",
+
+	});
+	$('#modal_01').modal('show');
+}
+function project_modal2() {
+	$('#modal_02').css({
+		maxWidth: '900px!important',
+		padding: '0rem!important'
+	});
+	$('#modal_content_02').css({
+		padding: '0rem'
+	});
+	$('#modal_img_02').css({
+		width: "100%",
+
+	});
+	$('#modal_02').modal('show');
+}	
 </script>
 </html>
+
+
+
+

@@ -1,0 +1,86 @@
+.container-grid {
+	padding: 10px;
+}
+.item-grid {
+	max-height: 1000px;
+	position: relative;
+	border: 1px solid #d9dfeb;
+	border-radius: 5px;
+	float: left;
+}
+.categor-grid {
+	width: 220px;
+	margin-right: 10px;
+}
+.list-grid {
+	width: 73%;
+	
+}
+
+.categor-item:last-child {
+	border-bottom: 0px solid #FFFFFF!important;
+}
+.categor-item {
+	border-bottom: 1px solid #d9dfeb;
+	padding: 12px;
+	cursor: pointer;
+	transition: 0.1s;
+}
+.categor-item:hover {
+	background-color: #d9dfeb;
+}
+.categor-icon {
+	font-size: 15px!important;
+	position: relative;
+	top: -1px;
+}
+
+.list-grid {
+	border-bottom: 1px solid #d9dfeb;
+	min-height: 100px;
+	cursor: pointer;
+	padding: 13px;
+}
+.user-img {
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/user-img.jpg);
+    background-size: cover;
+    background-position: center;
+	border-radius: 20px;
+	float: left;
+}
+.user-img-sample {
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/sample-user-img.jpg);
+    background-size: cover;
+    background-position: center;
+	border-radius: 20px;
+}
+.list-item-grid {
+	border-bottom: 1px solid #d9dfeb;
+}
+.list-item-grid:last-child {
+	border-bottom: 0px solid #d9dfeb;
+}
+.list-item-content {
+	max-width: 680px;
+	position: relative;
+	left: -10px;
+	padding-right: 10px;
+}
+.user-name {
+	font-size: 20px;
+	position: relative;
+}
+.user-name:hover {
+	color: rgba(48,48,235,1.00);
+}
+.user-intro {
+	line-height: 20px;
+	position: relative;
+	top: -15px;
+	font-size: 15px;
+	color: rgba(61,61,61,1.00);
+}
