@@ -1,0 +1,43 @@
+@media (max-width: 870px) {
+	.list-grid {
+		margin-bottom: -100px;
+		/* padding: 13px; */
+	}
+}
+.container-grid {
+	padding: 10px;
+}
+/* container content padding set */
+
+.user-info {
+	padding: 13px;
+}
+.user-img {
+	float: left;
+	position: relative;
+	margin-bottom: 3px;
+}
+.user-name {
+	font-size: 30px;
+	position: relative;
+	top: 28px;
+	left: 10px;
+}
+.form-grid {
+	padding: 13px;
+	position: relative;
+	top: 10px;
+	margin-bottom: 10px;
+}
+.pw-form {
+	margin-bottom: 5px!important;
+}
+.pw-form:last-child {
+	margin-bottom: 0px!important;
+}
+
+.critical-grid {
+	border-top: 1px solid #d9dfeb;
+	padding: 13px;
+}
+

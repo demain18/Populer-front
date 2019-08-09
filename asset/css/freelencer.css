@@ -1,39 +1,6 @@
 .container-grid {
 	padding: 10px;
 }
-.item-grid {
-	max-height: 1000px;
-	position: relative;
-	border: 1px solid #d9dfeb;
-	border-radius: 5px;
-	float: left;
-}
-.categor-grid {
-	width: 220px;
-	margin-right: 10px;
-}
-.list-grid {
-	width: 73%;
-	
-}
-
-.categor-item:last-child {
-	border-bottom: 0px solid #FFFFFF!important;
-}
-.categor-item {
-	border-bottom: 1px solid #d9dfeb;
-	padding: 12px;
-	cursor: pointer;
-	transition: 0.1s;
-}
-.categor-item:hover {
-	background-color: #d9dfeb;
-}
-.categor-icon {
-	font-size: 15px!important;
-	position: relative;
-	top: -1px;
-}
 
 .list-grid {
 	border-bottom: 1px solid #d9dfeb;
@@ -81,6 +48,6 @@
 	line-height: 20px;
 	position: relative;
 	top: -15px;
-	font-size: 15px;
+	font-size: 14px;
 	color: rgba(61,61,61,1.00);
 }

@@ -1,0 +1,34 @@
+@media (max-width: 870px) {
+	.list-grid {
+		margin-bottom: -100px;
+		/* padding: 13px; */
+	}
+}
+.container-grid {
+	padding: 10px;
+}
+/* container content padding set */
+
+.list-grid {
+	min-height: 549px!important;
+	cursor: default!important;
+}
+.title-grid {
+	margin-top: 10px;
+	cursor: default!important;
+}
+.editor-grid {
+	padding: 0px;
+}
+
+.icon-question {
+	cursor: pointer;
+}
+
+.label-name {
+	margin: 13px;
+	font-size: 15px;
+}
+.form-grid{
+	padding: 10px;
+}

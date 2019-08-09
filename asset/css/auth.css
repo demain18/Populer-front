@@ -24,6 +24,13 @@ body {
 	max-width: 500px;
 	margin: auto;
 }
+@media (max-width: 870px) {
+	.form-grid {
+		max-width: 500px;
+		margin: auto;
+		padding: 30px;
+	}
+}
 .forms {
 	background-color: rgba(255,255,255,0.00)!important;
 }

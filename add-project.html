@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>포폴러</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./asset/css/add-project.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/header.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./asset/semantic/semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+	<script src="./asset/semantic/semantic.min.js"></script>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+	<script src="./asset/js/ckeditor/ckeditor.js"></script>
+	<!-- editor -->
+	<!--
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./asset/js/emoji-picker/lib/css/emoji.css" rel="stylesheet">
+	<script src="./asset/js/emoji-picker/lib/js/config.js"></script>
+    <script src="./asset/js/emoji-picker/lib/js/util.js"></script>
+    <script src="./asset/js/emoji-picker/lib/js/jquery.emojiarea.js"></script>
+    <script src="./asset/js/emoji-picker/lib/js/emoji-picker.js"></script>
+		emoji -->
+</head>
+<body>
+	<div class="header-grid">
+		<div class="header-grid-content">
+			<a href="index.html">
+				<span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
+			</a>
+			<!-- <span class="header-btn-grid-left" style="margin-left: 10px;">홈</span> -->
+			<a href="freelencer.html"><span class="header-btn-grid-left" style="margin-left: 10px;">프리랜서</span></a>
+			<!-- <span class="header-btn-grid-left">Button</span> -->
+			<div class="ui dropdown header-dropdown">
+				  <span class="header-user-name">김명준<i class="dropdown icon"></i></span>
+				  <div class="user-img-small"></div>
+				  <div class="menu">
+					  <div class="item">기본 정보</div>
+					  <div class="item">
+						  메세지
+						  <a class="ui mini blue circular label message-label">17</a>
+					  </div>
+					  <div class="item">내 포트폴리오</div>
+					  <div class="item">프로젝트 추가하기</div>
+					  <div class="item">설정</div>
+					  <div class="divider"></div>
+					  <div class="item"><a href="auth.html">로그아웃 하기</a></div>
+				  </div>
+			</div>
+		</div>	
+	</div>
+    <div class="container-grid">
+		
+		<div class="categor-grid grid-set">
+			<div class="categor-item">
+				<i class="icon user categor-icon"></i> 기본 정보
+			</div>
+			<div class="categor-item">
+				<i class="icon comment categor-icon"></i> 메세지
+			</div>
+			<div class="categor-item">
+				<i class="icon file alternate outline categor-icon"></i> 내 포트폴리오
+			</div>
+			<div class="categor-item categor-item-hover">
+				<i class="icon keyboard categor-icon"></i> 프로젝트 추가하기
+			</div>
+		</div>
+		<div class="list-grid grid-set">
+	
+			<div class="item-title">
+				<p>프로젝트 추가하기 <i class="icon question circle icon-question" onClick="modal_help();"></i></p>
+			</div>
+			<div class="title-grid">
+				<label class="label-name">프로젝트 제목</label><br />
+				<form class="ui form form-grid">
+				  <div class="field">
+					<!-- <label>사용자 명</label> -->
+					<input type="text" name="title-input" placeholder="이곳에 프로젝트 제목을 작성하세요." data-emojiable="true">
+				  </div>
+				</form>
+			</div>
+			<div class="editor-grid">
+			<textarea name="inputProjectContent" id="contentInput" class="content-input" cols="50" rows="10"></textarea>
+			</div>
+		</div>
+		
+		<!-- modal here -->
+		<div class="ui tiny modal" id="modal_help">
+			<div class="header">
+				프로젝트 작성하는 법
+			</div>
+			<div class="content">
+				
+				<div class="ui bulleted list">
+				  <div class="item">
+					<div>이모지 아이콘을 제목에 넣을 수 있습니다.</div>
+					<div class="list">
+					  <a class="item" href="https://getemoji.com" target="_blank">getemoji.com</a>
+					</div>
+				  </div>
+				  <div class="item">프로젝트에 대한 설명과 사용한 기술, 팀원, 이미지 순으로 작성하는것을 권장합니다.</div>
+				  <div class="item">작성한 글은 프로젝트 페이지에서 더 넓은 화면으로 표시됩니다.</div>
+				</div>
+				
+			</div>
+			<div class="actions">
+				<div class="ui deny button">
+					닫기
+				</div>
+			</div>
+		</div>
+		<!-- modal here -->
+	</div>
+	<div class="footer-grid">
+		© 2019 Populer. All rights reserved.
+	</div>
+</body>
+<script src="./asset/js/all.js"></script>
+<script>
+	function modal_help() {
+		$('#modal_help')
+		  .modal('show')
+		;
+	}
+	
+	CKEDITOR.replace('contentInput', {
+      // Define the toolbar groups as it is a more accessible solution.
+      toolbarGroups: [{
+          "name": "basicstyles",
+          "groups": ["basicstyles"]
+        },
+        {
+          "name": "links",
+          "groups": ["links"]
+        },
+        {
+          "name": "paragraph",
+          "groups": ["list", "blocks"]
+        },
+        {
+          "name": "document",
+          "groups": ["mode"]
+        },
+        {
+          "name": "insert",
+          "groups": ["insert"]
+        },
+        {
+          "name": "styles",
+          "groups": ["styles"]
+        },
+        {
+          "name": "about",
+          "groups": ["about"]
+        }
+      ],
+      // Remove the redundant buttons from toolbar groups defined above.
+      removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar,About'
+    });
+	CKEDITOR.config.height = 400;  
+
+	
+</script>
+</html>
+
+
+

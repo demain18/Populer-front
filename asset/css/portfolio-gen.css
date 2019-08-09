@@ -1,0 +1,17 @@
+@media (max-width: 870px) {
+	.list-grid {
+		margin-bottom: -100px;
+		/* padding: 13px; */
+	}
+}
+.container-grid {
+	padding: 10px;
+}
+/* container content padding set */
+
+.item-content {
+	padding: 13px;
+}
+.explain {
+	font-size: 15px;
+}

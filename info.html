@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>포폴러</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./asset/css/info.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/header.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./asset/semantic/semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+	<script src="./asset/semantic/semantic.min.js"></script>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="header-grid">
+		<div class="header-grid-content">
+			<a href="index.html">
+				<span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
+			</a>
+			<!-- <span class="header-btn-grid-left" style="margin-left: 10px;">홈</span> -->
+			<a href="freelencer.html"><span class="header-btn-grid-left" style="margin-left: 10px;">프리랜서</span></a>
+			<!-- <span class="header-btn-grid-left">Button</span> -->
+			<div class="ui dropdown header-dropdown">
+				  <span class="header-user-name">김명준<i class="dropdown icon"></i></span>
+				  <div class="user-img-small"></div>
+				  <div class="menu">
+					  <div class="item">기본 정보</div>
+					  <div class="item">
+						  메세지
+						  <a class="ui mini blue circular label message-label">17</a>
+					  </div>
+					  <div class="item">내 포트폴리오</div>
+					  <div class="item">프로젝트 추가하기</div>
+					  <div class="item">설정</div>
+					  <div class="divider"></div>
+					  <div class="item"><a href="auth.html">로그아웃 하기</a></div>
+				  </div>
+			</div>
+		</div>	
+	</div>
+    <div class="container-grid">
+		
+		<div class="categor-grid grid-set">
+			<div class="categor-item categor-item-hover">
+				<i class="icon user categor-icon"></i> 기본 정보
+			</div>
+			<div class="categor-item">
+				<i class="icon comment categor-icon"></i> 메세지
+			</div>
+			<div class="categor-item">
+				<i class="icon file alternate outline categor-icon"></i> 내 포트폴리오
+			</div>
+			<div class="categor-item">
+				<i class="icon keyboard categor-icon"></i> 프로젝트 추가하기
+			</div>
+		</div>
+		<div class="list-grid grid-set">
+	
+			<div class="item-title">
+				<p>기본 정보</p>
+			</div>
+			<div class="user-info">
+				<div class="user-img"></div>
+				<!-- <div class="user-name">김명준</div> -->
+			</div>
+			<form class="ui form form-grid">
+			  <div class="field">
+				<label>사용자 명</label>
+				<input type="text" name="first-name" value="김명준">
+			  </div>
+			  <div class="field">
+				<label>이메일</label>
+				<input type="text" name="last-name" value="happysugar180@gmail.com">
+			  </div>
+			  <div class="field">
+				<label>비밀번호 변경</label>
+				<input type="password" class="pw-form" name="last-name" placeholder="Password Now">
+				<input type="password" class="pw-form" name="last-name" placeholder="New Password">
+				<input type="password" class="pw-form" name="last-name" placeholder="New Password">
+			  </div>
+				<!--
+			  <div class="field">
+				<div class="ui checkbox">
+				  <input type="checkbox" tabindex="0" class="hidden">
+				  <label>이대로 정보를 변경하겠습니까?</label>
+				</div>
+			  </div>
+				-->
+			  <button class="ui button" type="submit">정보 변경하기</button>
+			</form>
+			<form class="ui form critical-grid">
+				<button class="ui red button" type="submit">회원 탈퇴하기</button>
+			</form>
+			
+			
+		</div>
+		
+	</div>
+	<div class="footer-grid">
+		© 2019 Populer. All rights reserved.
+	</div>
+</body>
+<script src="./asset/js/all.js"></script>
+<script>
+	
+</script>
+</html>
+
+
+
