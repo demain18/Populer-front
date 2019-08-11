@@ -58,3 +58,12 @@ body {
 	position: relative;
 	top: 15px;
 }
+
+.check {
+	color: #007bff!important;
+
+}
+.check:hover {
+	color: #0D64C1!important;
+
+}

@@ -1,0 +1,115 @@
+@media (max-width: 870px) {
+	.list-grid {
+		margin-bottom: -100px;
+		/* padding: 13px; */
+	}
+}
+.container-grid {
+	padding: 10px;
+}
+/* container content padding set */
+
+.liner {
+	width: 100%;
+	height: 10px;
+	border-bottom: 1px solid #d9dfeb;
+}
+.item-content {
+	padding: 13px;
+}
+.ui-btn-edit {
+	margin-bottom: 10px!important;
+}
+.explain {
+	font-size: 15px;
+}
+.explain-link {
+	font-size: 15px;
+	color: #007bff;
+	line-height: 30px;
+	margin-bottom: 10px!important;
+}
+.explain-link:hover {
+	color: #0D64C1;
+	text-decoration: underline;
+}
+.comment {
+	font-size: 15px;
+	margin: 0px 0px 5px 0px;
+}
+
+.banner-img-grid {
+	width: 60%;
+	position: relative;
+	top: -10px;
+}
+.banner-img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.banner-img-content {
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -10px;
+	margin-left: -42px;
+	cursor: pointer;
+	visibility: hidden;
+}
+.banner-img-content:hover {
+	text-decoration: underline;
+}
+.btn-edit {
+	visibility: hidden;
+}
+.btn-edit:hover {
+	color: #2161A4!important;
+	text-decoration: underline;
+}
+.btn-del {
+	visibility: hidden;
+	color: red!important;
+}
+.btn-del:hover {
+	color: rgba(189,10,10,1.00)!important;
+	text-decoration: underline;
+}
+.content-list {
+	font-size: 15px!important;
+}
+.item-title-small {
+	cursor: default;
+}
+.item {
+	cursor: pointer;
+}
+.icon-plus:hover {
+	color: gray;
+}
+.add-content {
+	
+}
+.add-content:hover {
+	text-decoration: underline;
+}
+
+.editor-name {
+	margin-top: 20px!important;
+}
+.form-grid {
+	margin: 10px 0px 10px 0px;
+}
+
+/* modal editor */
+.modal-editor {
+	min-height: 300px;
+}
+.title-grid {
+	margin-top: -10px!important;
+}
+.editor-grid {
+	margin-top: 10px!important;
+}
+/* modal editor */

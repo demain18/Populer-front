@@ -14,9 +14,16 @@
 	height: 10px;
 	border-bottom: 1px solid #d9dfeb;
 }
-.item-content {
-	padding: 13px;
+.title-grid {
+	margin-top: 10px;
 }
-.explain {
+.label-name {
+	margin: 13px 13px 13px 13px;
 	font-size: 15px;
+}
+.form-grid{
+	padding: 10px;
+}
+.btn-gen-grid {
+	padding: 10px;
 }

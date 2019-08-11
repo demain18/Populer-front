@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>포폴러</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./asset/css/portfolio-edit.css">
+    <link rel="stylesheet" type="text/css" href="./asset/css/header.css">
+    <link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./asset/semantic/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="./asset/semantic/semantic.min.js"></script>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <script src="./asset/js/ckeditor/ckeditor.js"></script>
+</head>
+
+<body>
+    <div class="header-grid">
+        <div class="header-grid-content">
+            <a href="index.html">
+                <span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
+            </a>
+            <!-- <span class="header-btn-grid-left" style="margin-left: 10px;">홈</span> -->
+            <a href="freelencer.html"><span class="header-btn-grid-left" style="margin-left: 10px;">프리랜서</span></a>
+            <!-- <span class="header-btn-grid-left">Button</span> -->
+            <div class="ui dropdown header-dropdown">
+                <span class="header-user-name">김명준<i class="dropdown icon"></i></span>
+                <div class="user-img-small"></div>
+                <div class="menu">
+                    <div class="item" onClick="location.href='info.html'">기본 정보</div>
+                    <div class="item" onClick="location.href='message.html'">메세지
+                        <a class="ui mini blue circular label message-label">17</a>
+                    </div>
+                    <div class="item" onClick="location.href='portfolio-gen.html'">내 포트폴리오</div>
+                    <div class="item" onClick="location.href='add-project.html'">프로젝트 추가하기</div>
+                    <div class="divider"></div>
+                    <div class="item" onClick="location.href='auth.html'">로그아웃 하기</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-grid">
+
+        <div class="categor-grid grid-set">
+            <div class="categor-item" onClick="location.href='info.html'">
+                <i class="icon user categor-icon"></i> 기본 정보
+            </div>
+            <div class="categor-item" onClick="location.href='message.html'">
+                <i class="icon comment categor-icon"></i> 메세지
+            </div>
+            <div class="categor-item categor-item-hover" onClick="location.href='portfolio-gen.html'">
+                <i class="icon file alternate outline categor-icon"></i> 포트폴리오 관리
+            </div>
+            <div class="categor-item" onClick="location.href='add-project.html'">
+                <i class="icon keyboard categor-icon"></i> 프로젝트 추가하기
+            </div>
+        </div>
+        <div class="list-grid grid-set">
+
+            <div class="item-title">
+                <p>포트폴리오 관리</p>
+            </div>
+            <div class="item-content">
+				
+				<div class="title-grid">
+                <label class="label-name">프로젝트 제목</label>
+                <br />
+                <form class="ui form form-grid">
+                    <div class="field">
+                        <!-- <label>사용자 명</label> -->
+                        <input type="text" name="title-input" placeholder="이곳에 프로젝트 제목을 작성하세요." data-emojiable="true">
+                    </div>
+                </form>
+            </div>
+            <textarea name="inputProjectContent" id="contentInput" class="content-input" cols="50" rows="10"></textarea>
+			<div class="btn-gen-grid">
+				
+				<button class="ui green button btn-gen">발행하기</button>
+				<button class="ui button btn-gen">취소하기</button>
+			</div>	
+				
+            </div>
+        </div>
+        <!-- modal -->
+        <div class="ui small modal modal-editor">
+            <div class="header">
+                수정하기
+            </div>
+            <div class="content">
+
+                <div class="title-grid">
+                    <label class="label-name">프로젝트 제목</label>
+                    <br />
+                    <form class="ui form form-grid">
+                        <div class="field">
+                            <!-- <label>사용자 명</label> -->
+                            <input type="text" name="title-input" placeholder="이곳에 프로젝트 제목을 작성하세요." data-emojiable="true">
+                        </div>
+                    </form>
+                </div>
+                <div class="editor-grid">
+                    <textarea name="inputProjectContent" id="contentInputModal" class="content-input" cols="50" rows="10"></textarea>
+                </div>
+				<button class="ui green button">Green</button>
+
+            </div>
+            <div class="actions">
+                <div class="ui deny button">
+                    발행하기
+                </div>
+                <div class="ui positive right labeled icon button">
+                    추가하기
+                    <i class="checkmark icon"></i>
+                </div>
+            </div>
+        </div>
+        <!-- modal -->
+
+    </div>
+
+    </div>
+    <div class="footer-grid">
+        © 2019 Populer. All rights reserved.
+    </div>
+</body>
+<script src="./asset/js/all.js"></script>
+<script>
+    $("#banner-img, .banner-img-content").mouseover(function() {
+        $("#banner-img").css("filter", "brightness(50%)");
+        $(".banner-img-content").css("visibility", "visible");
+    });
+    $("#banner-img, .banner-img-content").mouseleave(function() {
+        $("#banner-img").css("filter", "brightness(100%)");
+        $(".banner-img-content").css("visibility", "hidden");
+    });
+
+    $(".item").mouseover(function() {
+        $(this).children('.btn-edit').css("visibility", "visible");
+        $(this).children('.btn-del').css("visibility", "visible");
+    });
+    $(".item").mouseleave(function() {
+        $(this).children('.btn-edit').css("visibility", "hidden");
+        $(this).children('.btn-del').css("visibility", "hidden");
+    });
+
+    function modal_editor_on() {
+        $('.small.modal')
+            .modal('show');
+    }
+    CKEDITOR.replace('contentInput', {
+        // Define the toolbar groups as it is a more accessible solution.
+        toolbarGroups: [{
+            "name": "basicstyles",
+            "groups": ["basicstyles"]
+        }, {
+            "name": "links",
+            "groups": ["links"]
+        }, {
+            "name": "paragraph",
+            "groups": ["list", "blocks"]
+        }, {
+            "name": "document",
+            "groups": ["mode"]
+        }, {
+            "name": "insert",
+            "groups": ["insert"]
+        }, {
+            "name": "styles",
+            "groups": ["styles"]
+        }, {
+            "name": "about",
+            "groups": ["about"]
+        }],
+        // Remove the redundant buttons from toolbar groups defined above.
+        removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar,About'
+    });
+    CKEDITOR.config.height = 400;
+</script>
+
+</html>

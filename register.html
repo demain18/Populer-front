@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>포폴러</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="./asset/css/portfolio-gen.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/register.css">
 	<link rel="stylesheet" type="text/css" href="./asset/css/header.css">
 	<link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -18,7 +18,6 @@
 	<script src="./asset/semantic/semantic.min.js"></script>
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
-	<script src="./asset/js/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 	<div class="header-grid">
@@ -37,7 +36,7 @@
 					  <div class="item" onClick="location.href='message.html'">메세지
 						  <a class="ui mini blue circular label message-label">17</a>
 					  </div>
-					  <div class="item" onClick="location.href='portfolio-gen.html'">포트폴리오 관리</div>
+					  <div class="item" onClick="location.href='portfolio-gen.html'">내 포트폴리오</div>
 					  <div class="item" onClick="location.href='add-project.html'">프로젝트 추가하기</div>
 					  <div class="divider"></div>
 					  <div class="item" onClick="location.href='auth.html'">로그아웃 하기</div>
@@ -47,29 +46,42 @@
 	</div>
     <div class="container-grid">
 		
-		<div class="categor-grid grid-set">
-			<div class="categor-item" onClick="location.href='info.html'">
-				<i class="icon user categor-icon"></i> 기본 정보
-			</div>
-			<div class="categor-item" onClick="location.href='message.html'">
-				<i class="icon comment categor-icon"></i> 메세지
-			</div>
-			<div class="categor-item categor-item-hover" onClick="location.href='portfolio-gen.html'">
-				<i class="icon file alternate outline categor-icon"></i> 내 포트폴리오
-			</div>
-			<div class="categor-item" onClick="location.href='add-project.html'">
-				<i class="icon keyboard categor-icon"></i> 프로젝트 추가하기
-			</div>
-		</div>
-		<div class="list-grid grid-set">
-	
-			<div class="item-title">
-				<p>포트폴리오 관리</p>
-			</div>
-			<div class="item-content">
-				<!-- 컨텐츠는 15픽셀 -->
-				<p class="explain">아직 포트폴리오를 만들지 않았습니다, 새로 만드시겠습니까?</p>
-				<a href="portfolio-gen-process.html"><button class="ui inverted orange button">포트폴리오 생성</button></a>
+		<div class="auth-grid">
+			<div class="title">Populer</div>
+			<div class="title-txt">쉽게 만들고 간편하게 쓰는 포트폴리오</div>
+			<div class="form-grid">
+			<form class="ui large form forms" action="index.html">
+			  <div class="field">
+				<!-- <label class="form-name">E-mail</label> -->
+				<input type="text" name="first-name" placeholder="E-mail">
+			  </div>
+			  <div class="field">
+				<!-- <label class="form-name">E-mail</label> -->
+				<input type="text" name="first-name" placeholder="Id">
+			  </div>
+			  <div class="field">
+				<!-- <label class="form-name">Password</label> -->
+				<input type="text" name="last-name" placeholder="Password">
+			  </div>
+			  <div class="field">
+				<!-- <label class="form-name">Password</label> -->
+				<input type="text" name="last-name" placeholder="Re Password">
+				 <div class="ui checkbox">
+				  <input type="checkbox" tabindex="0" class="hidden">
+				  <label style="color: white; margin-top: 15px;"><a href=""  class="check">개인정보 취급방침</a> 을 읽었으며 동의합니다.</label>
+				</div>
+			  </div>
+				<!--
+			  <div class="field">
+				<div class="ui checkbox">
+				  <input type="checkbox" tabindex="0" class="hidden">
+				  <label class="form-name">I agree to the Terms and Conditions</label>
+				</div>
+			  </div>
+				-->
+				<a href="index.html"><button class="ui blue button field btn-submit" type="submit">회원가입 하기</button></a>
+			</form>
+			<a href="auth.html"><p class="register-txt">로그인 하기</p></a>
 			</div>
 		</div>
 		

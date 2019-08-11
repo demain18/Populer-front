@@ -16,8 +16,8 @@
 	  crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 	<script src="./asset/semantic/semantic.min.js"></script>
-	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+	<script src="./asset/js/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 	<div class="header-grid">
@@ -32,16 +32,14 @@
 				  <span class="header-user-name">김명준<i class="dropdown icon"></i></span>
 				  <div class="user-img-small"></div>
 				  <div class="menu">
-					  <div class="item">기본 정보</div>
-					  <div class="item">
-						  메세지
+					  <div class="item" onClick="location.href='info.html'">기본 정보</div>
+					  <div class="item" onClick="location.href='message.html'">메세지
 						  <a class="ui mini blue circular label message-label">17</a>
 					  </div>
-					  <div class="item">내 포트폴리오</div>
-					  <div class="item">프로젝트 추가하기</div>
-					  <div class="item">설정</div>
+					  <div class="item" onClick="location.href='portfolio-gen.html'">포트폴리오 관리</div>
+					  <div class="item" onClick="location.href='add-project.html'">프로젝트 추가하기</div>
 					  <div class="divider"></div>
-					  <div class="item"><a href="auth.html">로그아웃 하기</a></div>
+					  <div class="item" onClick="location.href='auth.html'">로그아웃 하기</div>
 				  </div>
 			</div>
 		</div>	
@@ -49,16 +47,16 @@
     <div class="container-grid">
 		
 		<div class="categor-grid grid-set">
-			<div class="categor-item categor-item-hover">
+			<div class="categor-item categor-item-hover" onClick="location.href='info.html'">
 				<i class="icon user categor-icon"></i> 기본 정보
 			</div>
-			<div class="categor-item">
+			<div class="categor-item" onClick="location.href='message.html'">
 				<i class="icon comment categor-icon"></i> 메세지
 			</div>
-			<div class="categor-item">
-				<i class="icon file alternate outline categor-icon"></i> 내 포트폴리오
+			<div class="categor-item" onClick="location.href='portfolio-gen.html'">
+				<i class="icon file alternate outline categor-icon"></i> 포트폴리오 관리
 			</div>
-			<div class="categor-item">
+			<div class="categor-item" onClick="location.href='add-project.html'">
 				<i class="icon keyboard categor-icon"></i> 프로젝트 추가하기
 			</div>
 		</div>
@@ -74,17 +72,17 @@
 			<form class="ui form form-grid">
 			  <div class="field">
 				<label>사용자 명</label>
-				<input type="text" name="first-name" value="김명준">
+				<input type="text" name="first-name" readonly="" value="김명준">
 			  </div>
 			  <div class="field">
 				<label>이메일</label>
-				<input type="text" name="last-name" value="happysugar180@gmail.com">
+				<input type="text" name="last-name" readonly="" value="happysugar180@gmail.com">
 			  </div>
 			  <div class="field">
 				<label>비밀번호 변경</label>
-				<input type="password" class="pw-form" name="last-name" placeholder="Password Now">
-				<input type="password" class="pw-form" name="last-name" placeholder="New Password">
-				<input type="password" class="pw-form" name="last-name" placeholder="New Password">
+				<input type="password" class="pw-form" name="last-name" placeholder="Password now">
+				<input type="password" class="pw-form" name="last-name" placeholder="New password">
+				<input type="password" class="pw-form" name="last-name" placeholder="New password again">
 			  </div>
 				<!--
 			  <div class="field">

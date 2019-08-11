@@ -32,16 +32,14 @@
 				  <span class="header-user-name">김명준<i class="dropdown icon"></i></span>
 				  <div class="user-img-small"></div>
 				  <div class="menu">
-					  <div class="item">기본 정보</div>
-					  <div class="item">
-						  메세지
+					  <div class="item" onClick="location.href='info.html'">기본 정보</div>
+					  <div class="item" onClick="location.href='message.html'">메세지
 						  <a class="ui mini blue circular label message-label">17</a>
 					  </div>
-					  <div class="item">내 포트폴리오</div>
-					  <div class="item">프로젝트 추가하기</div>
-					  <div class="item">설정</div>
+					  <div class="item" onClick="location.href='portfolio-gen.html'">내 포트폴리오</div>
+					  <div class="item" onClick="location.href='add-project.html'">프로젝트 추가하기</div>
 					  <div class="divider"></div>
-					  <div class="item"><a href="auth.html">로그아웃 하기</a></div>
+					  <div class="item" onClick="location.href='auth.html'">로그아웃 하기</div>
 				  </div>
 			</div>
 		</div>	
@@ -50,11 +48,12 @@
 		
 		<div class="auth-grid">
 			<div class="title">Populer</div>
+			<div class="title-txt">쉽게 만들고 간편하게 쓰는 포트폴리오</div>
 			<div class="form-grid">
-			<form class="ui large form forms">
+			<form class="ui large form forms" action="index.html">
 			  <div class="field">
 				<!-- <label class="form-name">E-mail</label> -->
-				<input type="text" name="first-name" placeholder="E-mail">
+				<input type="text" name="first-name" placeholder="Id">
 			  </div>
 			  <div class="field">
 				<!-- <label class="form-name">Password</label> -->
@@ -68,9 +67,9 @@
 				</div>
 			  </div>
 				-->
-			  <button class="ui blue button field btn-submit" type="submit">로그인</button>
+				<button class="ui blue button field btn-submit" type="submit">로그인</button>
 			</form>
-			<a href=""><p class="register-txt">회원가입 하기</p></a>
+			<a href="register.html"><p class="register-txt">회원가입 하기</p></a>
 			</div>
 		</div>
 		

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>포폴러</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./asset/css/portfolio-gen-process.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/header.css">
+	<link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./asset/semantic/semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+	<script src="./asset/semantic/semantic.min.js"></script>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+	<script src="./asset/js/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+	<div class="header-grid">
+		<div class="header-grid-content">
+			<a href="index.html">
+				<span class="header-logo"><i class="servicestack icon header-logo-icon"></i> Populer</span>
+			</a>
+			<!-- <span class="header-btn-grid-left" style="margin-left: 10px;">홈</span> -->
+			<a href="freelencer.html"><span class="header-btn-grid-left" style="margin-left: 10px;">프리랜서</span></a>
+			<!-- <span class="header-btn-grid-left">Button</span> -->
+			<div class="ui dropdown header-dropdown">
+				  <span class="header-user-name">김명준<i class="dropdown icon"></i></span>
+				  <div class="user-img-small"></div>
+				  <div class="menu">
+					  <div class="item" onClick="location.href='info.html'">기본 정보</div>
+					  <div class="item" onClick="location.href='message.html'">메세지
+						  <a class="ui mini blue circular label message-label">17</a>
+					  </div>
+					  <div class="item" onClick="location.href='portfolio-gen.html'">포트폴리오 관리</div>
+					  <div class="item" onClick="location.href='add-project.html'">프로젝트 추가하기</div>
+					  <div class="divider"></div>
+					  <div class="item" onClick="location.href='auth.html'">로그아웃 하기</div>
+				  </div>
+			</div>
+		</div>	
+	</div>
+    <div class="container-grid">
+		
+		<div class="categor-grid grid-set">
+			<div class="categor-item" onClick="location.href='info.html'">
+				<i class="icon user categor-icon"></i> 기본 정보
+			</div>
+			<div class="categor-item" onClick="location.href='message.html'">
+				<i class="icon comment categor-icon"></i> 메세지
+			</div>
+			<div class="categor-item categor-item-hover" onClick="location.href='portfolio-gen.html'">
+				<i class="icon file alternate outline categor-icon"></i> 내 포트폴리오
+			</div>
+			<div class="categor-item" onClick="location.href='add-project.html'">
+				<i class="icon keyboard categor-icon"></i> 프로젝트 추가하기
+			</div>
+		</div>
+		<div class="list-grid grid-set">
+	
+			<div class="item-title">
+				<p>포트폴리오 관리</p>
+			</div>
+			<div class="item-content">
+				<form class="ui form form-grid" action="portfolio-control.html">
+				 <!--
+				 <div class="field">
+					<label>test</label>
+					<input type="text" name="" value="" placeholder="">
+				 </div>
+				  -->
+				<div class="field">
+					<label>이름</label>
+					<input type="text" class="forms" name="" placeholder="이름">
+					<input type="text" class="forms" name="" placeholder="영문 이름">
+				</div>
+				<div class="field">
+					<label>대표 이미지</label>
+					<input type="file" name="" placeholder="대표 이미지">
+				</div>
+				<div class="field">
+					<label>배너 이미지</label>
+					<input type="file" name="" placeholder="배너 이미지">
+				</div>
+				<div class="field">
+					<label>활동 분야</label>
+					<div class="ui selection dropdown">
+						<input type="hidden" name="gender">
+						<i class="dropdown icon"></i>
+						<div class="default text">없음</div>
+						<div class="menu">
+							<!-- <div class="item" data-value="all">전체</div> -->
+							<div class="item" data-value="design">디자인</div>
+							<div class="item" data-value="coding">개발</div>
+							<div class="item" data-value="movie">영상 제작</div>
+							<div class="item" data-value="marketing">마케팅</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label>직업 명</label>
+					<input type="text" name="" value="" placeholder="직업 명">
+				</div>
+				<div class="field">
+					<label>개인 정보(선택)</label>
+					<input type="text" class="forms" name="" placeholder="경력">
+					<input type="text" class="forms" name="" placeholder="근무지">
+					<input type="text" class="forms" name="" placeholder="연락 시간대">
+					<input type="text" class="forms" name="" placeholder="희망 가격대">
+					<input type="text" class="forms" name="" placeholder="미팅 장소">
+				</div>
+				<div class="field">
+					<label>자기 소개</label>
+					<input type="text" name="" value="" placeholder="내용이 너무 길 경우 잘려서 표시됩니다">
+				</div>
+				<div class="field">
+					<label>연락처</label>
+					<input type="text" name="" value="" class="form-single" placeholder="populer@gmail.com">
+					<div class="inline field">
+						<div class="ui checkbox">
+						  	<input type="checkbox" tabindex="0" class="hidden">
+						  	<label>이메일</label>
+						</div>
+						<div class="ui checkbox checkbox-margin">
+						  	<input type="checkbox" tabindex="0" class="hidden">
+						  	<label>전화번호</label>
+						</div>
+						<div class="ui checkbox checkbox-margin">
+						  	<input type="checkbox" tabindex="0" class="hidden">
+						  	<label>카카오톡</label>
+						</div>
+						<div class="ui checkbox">
+						  	<input type="checkbox" tabindex="0" class="hidden">
+						  	<label>포폴러 메신저</label>
+						</div>
+				  	</div>
+				</div>
+				<div class="field">
+					<label>About Me <i class="icon question circle icon-question"></i></label>
+					<div class="inline field">
+						<div class="ui checkbox">
+						  	<input type="checkbox" tabindex="0" class="hidden">
+						  	<label class="checkbox-content-margin">🖐간단소개</label>
+						</div>
+						<div class="ui checkbox checkbox-margin">
+						  	<input type="checkbox" tabindex="0" class="hidden">
+						  	<label>💾기술들</label>
+						</div>
+						<div class="ui checkbox checkbox-margin">
+						  	<input type="checkbox" tabindex="0" class="hidden">
+						  	<label>📃활동 및 이력</label>
+						</div>
+				  	</div>
+				</div>
+				<div class="field">
+					<label>SNS(반드시 양식에 맞춰 작성해주세요!)</label>
+					<input type="text" class="forms" name="" placeholder="http://facebook.com/여기서부터">
+					<input type="text" class="forms" name="" placeholder="http://instagram.com/여기서부터">
+					<input type="text" class="forms" name="" placeholder="http://twitter.com/여기서부터">
+				</div>
+				<a href="portfolio-control.html"><button class="ui button" type="submit">생성하기</button></a>
+			</form>
+			</div>
+			
+			
+			
+		</div>
+		
+	</div>
+	<div class="footer-grid">
+		© 2019 Populer. All rights reserved.
+	</div>
+</body>
+<script src="./asset/js/all.js"></script>
+<script>
+	$('.ui.checkbox')
+	  .checkbox()
+	;
+</script>
+</html>
+
+
+
